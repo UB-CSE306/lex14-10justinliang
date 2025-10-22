@@ -1,0 +1,60 @@
+(gdb) break schemeValidator
+Breakpoint 1 at 0x565b: file schemeValidator.c, line 4.
+(gdb) break isDigit
+Breakpoint 2 at 0x595b: file schemeValidator.c, line 46.
+(gdb) break isAlpha
+Breakpoint 3 at 0x5846: file schemeValidator.c, line 26.
+(gdb) break isSpecial
+Breakpoint 4 at 0x58da: file schemeValidator.c, line 38.
+(gdb) run
+Starting program: /home/csdue/jliang52/CSE306/lex14-10justinliang/tests 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7ffff78b0640 (LWP 1000676)]
+[Detaching after fork from child process 1000677]
+[New Thread 0x7ffff70af640 (LWP 1000678)]
+[Detaching after fork from child process 1000680]
+[Detaching after fork from child process 1000682]
+[Detaching after fork from child process 1000684]
+[Detaching after fork from child process 1000686]
+[Detaching after fork from child process 1000688]
+[Detaching after fork from child process 1000690]
+[Detaching after fork from child process 1000692]
+[Detaching after fork from child process 1000694]
+[Detaching after fork from child process 1000696]
+[Detaching after fork from child process 1000698]
+[Detaching after fork from child process 1000700]
+[Detaching after fork from child process 1000702]
+[Detaching after fork from child process 1000704]
+[Detaching after fork from child process 1000706]
+[Detaching after fork from child process 1000708]
+[Detaching after fork from child process 1000710]
+[Detaching after fork from child process 1000712]
+[Detaching after fork from child process 1000714]
+[Detaching after fork from child process 1000716]
+[Detaching after fork from child process 1000718]
+[Detaching after fork from child process 1000720]
+[Detaching after fork from child process 1000722]
+[Detaching after fork from child process 1000724]
+[Detaching after fork from child process 1000726]
+[Detaching after fork from child process 1000728]
+[Detaching after fork from child process 1000730]
+[Detaching after fork from child process 1000732]
+[Detaching after fork from child process 1000734]
+[Detaching after fork from child process 1000736]
+[Detaching after fork from child process 1000738]
+[Detaching after fork from child process 1000740]
+[Detaching after fork from child process 1000742]
+[Detaching after fork from child process 1000744]
+[Detaching after fork from child process 1000746]
+[Detaching after fork from child process 1000748]
+[Detaching after fork from child process 1000750]
+[Detaching after fork from child process 1000752]
+[Detaching after fork from child process 1000754]
+[Detaching after fork from child process 1000756]
+[Detaching after fork from child process 1000758]
+[Detaching after fork from child process 1000760]
+[====] Synthesis: Tested: 42 | Passing: 42 | Failing: 0 | Crashing: 0 
+[Thread 0x7ffff70af640 (LWP 1000678) exited]
+[Thread 0x7ffff78b0640 (LWP 1000676) exited]
+[Inferior 1 (process 1000670) exited normally]
