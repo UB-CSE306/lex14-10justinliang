@@ -1,17 +1,17 @@
 #include "schemeValidator.h"
 
 int schemeValidator(char scheme[]) {
+  if (scheme[0] == '\0') {
+    return -1;
+  }
+  
   int result = -1;
   if (isAlpha(scheme[0])) {
     result = 0; 
     int i = 1;
     while (scheme[i] != '\0') {
-      if (!isAlpha(scheme[i])) {
-        if (!isDigit(scheme[i])) {
-          if (!isSpecial(scheme[i])) {
-            result = -1;
-          }
-        }
+      if (!isAlpha(scheme[i]) && !isDigit(scheme[i]) && !isSpecial(scheme[i])) {
+        result = -1;
       }
       i++;
     }
@@ -43,5 +43,5 @@ bool isSpecial(char c) {
 }
 
 bool isDigit(char c) {
-  return '0' < c && c < '9';
+  return '0' <= c && c <= '9';
 }

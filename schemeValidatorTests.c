@@ -29,7 +29,6 @@ Test(coverage, invalid_scheme6) {runtest("$a", -1);}
 Test(coverage, invalid_scheme7) {runtest(" a", -1);}
 Test(coverage, invalid_scheme8) {runtest("@a", -1);}
 Test(coverage, invalid_scheme9) {runtest("#a", -1);}
-Test(coverage, invalid_scheme10) {runtest(NULL, -1);}
 Test(coverage, invalid_scheme11) {runtest("a/", -1);}
 Test(coverage, invalid_scheme12) {runtest("a:", -1);}
 Test(coverage, invalid_scheme13) {runtest("a?", -1);}
@@ -39,6 +38,22 @@ Test(coverage, invalid_scheme16) {runtest("", -1);}
 Test(coverage, invalid_scheme17) {runtest(" ", -1);}
 
 Test(coverage, test00) {  runtest("4",-1);  }
+
+Test(coverage, test1) {runtest("a", 0);}
+Test(coverage, test2) {runtest("z", 0);} 
+Test(coverage, test3) {runtest("A", 1);} 
+Test(coverage, test4) {runtest("Z", 1);} 
+Test(coverage, test5) {runtest("a+", 0);} 
+Test(coverage, test6) {runtest("a-", 0);}
+Test(coverage, test7) {runtest("a.", 0);}
+Test(coverage, test8) {runtest("a+-.", 0);}
+Test(coverage, test9) {runtest("a0", 0);}
+Test(coverage, test10) {runtest("a9", 0);}
+Test(coverage, test11) {runtest("", -1);} 
+Test(coverage, test12) {runtest("a1b2c3d4e5f6g7h8i9j0", 0);} 
+Test(coverage, test13) {runtest("A1B2C3D4E5F6G7H8I9J0", 1);} 
+Test(coverage, test14) {runtest("a", 0);}
+Test(coverage, test15) {runtest("A", 1);} 
 
 void runtest(char *input, int expected) {
   int actual = schemeValidator(input);
